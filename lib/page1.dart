@@ -1,32 +1,29 @@
 import 'package:flutter/material.dart';
-import 'page2.dart'; // Assure-toi d'importer page2.dart
+import 'drawer_layout.dart'; // Assure-toi d'importer drawer_layout.dart
 
 class MaPremierePage extends StatelessWidget {
   const MaPremierePage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return BasePage(
       appBar: AppBar(
-        title: Text('Ma première page'),
+        title: const Text('Premiére page'),
         backgroundColor: const Color.fromARGB(255, 50, 182, 151),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
+            const Text(
               'Bonjour IIT',
               style: TextStyle(color: Color.fromARGB(216, 230, 7, 7)),
             ),
             ElevatedButton(
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const DeuxiemePage()),
-                );
+                Navigator.pushNamed(context, '/deuxieme');
               },
-              child: Text('Aller à la deuxième page'),
+              child: const Text('Aller à la deuxième page'),
             ),
           ],
         ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'drawer_layout.dart'; // Assure-toi d'importer drawer_layout.dart
 
 class DeuxiemePage extends StatefulWidget {
   const DeuxiemePage({super.key});
@@ -18,9 +19,10 @@ class _DeuxiemePageState extends State<DeuxiemePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return BasePage(
+      // Utilisation de BasePage pour intégrer le Drawer
       appBar: AppBar(
-        title: const Text('Deuxième page'),
+        title: const Text('deuxiéme page'),
         backgroundColor: const Color.fromARGB(255, 50, 182, 151),
       ),
       body: Center(
